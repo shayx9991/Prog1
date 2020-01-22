@@ -29,7 +29,7 @@ abstract class Controller
         //debug($path);
     }
 
-    
+    // necessary to check in Access Control List
     public function checkAcl(){
         $this->acl = require 'app/acl/'.$this->route['controller'].'.php';
         if($this->isAcl('all')){

@@ -13,6 +13,7 @@ class View{
         $this->path = $route['controller'].'/'.$route['action'];
         //debug($this->path);
     }
+    // this function is important to view necessary layouts
     public function render($title, $vars = []){
         extract($vars);
         $path = 'app/views/'.$this->path.'.php';
@@ -25,7 +26,7 @@ class View{
             echo 'Вид не найден '.$this->path;
         }
     }
-
+    // redirecting url path
     public function redirect($url){
         header('location: '.$url);
         exit;
