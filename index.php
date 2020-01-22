@@ -9,7 +9,7 @@ spl_autoload_register(function($class){
         require $path;
     }
 });
-
+//Comment test
 $router = new Router;
 $router->run();
 
